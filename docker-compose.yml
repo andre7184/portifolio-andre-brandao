@@ -1,0 +1,29 @@
+services:
+  portfolio-andre:
+    build: .
+    container_name: portfolio_andre
+    restart: always
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      
+      # --- Roteador Principal ---
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.promptweb.com.br`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls=true"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+
+      # --- Redirecionamento de promptweb.com.br/andre-brandao ---
+      - "traefik.http.routers.portfolio-legacy.rule=Host(`promptweb.com.br`) && PathPrefix(`/andre-brandao`)"
+      - "traefik.http.routers.portfolio-legacy.entrypoints=websecure"
+      - "traefik.http.routers.portfolio-legacy.tls=true"
+      - "traefik.http.middlewares.redir-portfolio.redirectregex.regex=^https?://promptweb.com.br/andre-brandao/(.*)"
+      - "traefik.http.middlewares.redir-portfolio.redirectregex.replacement=https://portfolio.promptweb.com.br/$$1"
+      - "traefik.http.middlewares.redir-portfolio.redirectregex.permanent=true"
+      - "traefik.http.routers.portfolio-legacy.middlewares=redir-portfolio"
+
+networks:
+  traefik:
+    external: true
