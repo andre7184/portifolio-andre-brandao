@@ -24,7 +24,7 @@ jobs:
             if [ -d ".git" ]; then
               git pull origin main
             else
-              git clone https://github.com/andre7184/seu-repositorio.git .
+              git clone https://github.com/andre7184/portifolio-andre-brandao.git .
             fi
             
             # Build e restart do container
