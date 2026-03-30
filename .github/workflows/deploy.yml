@@ -28,5 +28,5 @@ jobs:
             fi
             
             # Build e restart do container
-            docker-compose up -d --build
+            docker compose up -d --build
             docker image prune -f
