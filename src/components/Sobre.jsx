@@ -5,7 +5,7 @@ export default function Sobre() {
     // Usamos a classe de estilo do seu main.css
     <section id="sobre" style={{ minHeight: '80vh', backgroundColor: '#151515' }}>
       <div className="content-container">
-        <h1 className="section-title">SOBRE MIM</h1>
+        <h1 className="section-title">Sobre Mim</h1>
         <div className="notification">
           <div className="notititle">Minha Filosofia</div>
           <div className="notibody">

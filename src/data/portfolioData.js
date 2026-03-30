@@ -28,8 +28,9 @@ export const PROJECTS = [
         anchorId: 'detalhe-appup',
         title: 'App-UP CG (Mobile)',
         shortDescription: 'Aplicativo multiplataforma para mobilidade urbana e integração com APIs SaaS.',
+        longDescription: "O App-UP CG é um aplicativo mobile desenvolvido em React Native com integração a um backend em Python/Django. Seu objetivo é fornecer informações sobre locais e estabelecimentos, permitindo que usuários descubram opções próximas, consultem avaliações e também contribuam com suas próprias indicações. A aplicação conta com abas de destaques, reviews e mapa, oferecendo uma experiência completa de descoberta e interação. Usuários podem dar notas, escrever comentários e recomendar estabelecimentos, criando uma rede colaborativa de informações. Além disso, o projeto está preparado para integração com APIs SaaS, ampliando suas funcionalidades e tornando-o escalável para diferentes cenários de mobilidade urbana.",
         tags: ['React Native', 'Python', 'Mobile', 'Django', 'Typescript'],
-        images: ['/projects/app-up-cg_001.jpg', '/projects/app-up-cg_002.jpg']
+        githubUrl: 'https://github.com/andre7184/app-up-cg'
     },
     {
         id: 'infra-traefik',
@@ -44,8 +45,8 @@ export const PROJECTS = [
         anchorId: 'detalhe-neurono',
         title: 'Neurono (Orquestrador IA)',
         shortDescription: 'Plataforma para gerenciamento dinâmico de múltiplos modelos de Inteligência Artificial.',
-        tags: ['Python', 'Cloud API', 'Go', 'IA', 'SaaS', 'Linux', 'Docker', 'DevOps'],
-        images: ['/projects/neurono-ia_001.jpg', '/projects/neurono-ia_002.jpg', '/projects/neurono-ia_003.jpg', '/projects/neurono-ia_004.jpg', '/projects/neurono-ia_005.jpg']
+        longDescription: "O Neurono é um orquestrador de Inteligência Artificial de alta performance, projetado para integrar e gerenciar múltiplos modelos de IA em tempo real. Escrito em Golang para máxima concorrência e baixíssima latência, o sistema conecta serviços de Texto (LLM), Voz (STT/TTS), Visão (OCR) e classificação semântica em uma arquitetura modular baseada em containers Docker. A plataforma permite entrada multimodal (texto, áudio, imagem), roteamento inteligente de intenções via Machine Learning em Python e respostas dinâmicas com modelos de linguagem como Qwen. Além disso, suporta geração de QR Codes PIX instantâneos, streaming de respostas em tempo real (SSE) e saída multimodal com voz neural em português. Todo o ecossistema roda de forma local, garantindo privacidade e conformidade com LGPD, sem depender de APIs externas. É uma solução escalável e robusta para aplicações SaaS, atendimento omnichannel e automação de processos corporativos.",
+        tags: ['Python', 'Cloud API', 'Go', 'IA', 'SaaS', 'Linux', 'Docker', 'DevOps']
     },
     {
         id: 'app-flutter-tasks',
@@ -54,7 +55,6 @@ export const PROJECTS = [
         shortDescription: 'Gerenciamento de tarefas com persistência local e interface responsiva.',
         tags: ['Flutter', 'Dart', 'Mobile', 'SQLite', 'Android', 'iOS', 'API REST'],
         githubUrl: 'https://github.com/andre7184/AppFluter',
-        images: ['/projects/app-flutter-tasks_001.jpg', '/projects/app-flutter-tasks_002.jpg', '/projects/app-flutter-tasks_003.jpg']
     },
     {
         id: 'digicoin-django',

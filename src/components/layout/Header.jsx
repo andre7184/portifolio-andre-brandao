@@ -1,3 +1,4 @@
+import { text } from 'framer-motion/client';
 import React from 'react';
 
 export default function Header() {
@@ -5,9 +6,9 @@ export default function Header() {
     <header style={styles.header}>
       <nav style={styles.nav}>
         {/* O Logo (seu nome) aponta para o topo */}
-        <a href="#sobre" style={styles.logo}>
+        <span style={styles.logo}>
           André Martins Brandão
-        </a>
+        </span>
         <div style={styles.links}>
           <a href="#sobre" style={styles.link}>Sobre Mim</a>
           <a href="#habilidades" style={styles.link}>Habilidades</a>
@@ -40,7 +41,8 @@ const styles = {
     height: '70px',
   },
   logo: {
-    color: 'white',
+    color: '#4377ef',
+    textShadow: '0 0 10px rgba(67, 119, 239, 0.7)',
     textDecoration: 'none',
     fontFamily: '"Audiowide", sans-serif',
     fontSize: '1.5rem',

@@ -37,7 +37,7 @@ export default function Contato() {
   return (
     <section id="contato" style={styles.section}>
       <div className="content-container">
-        <h1 className="section-title">VAMOS CONECTAR?</h1>
+        <h1 className="section-title">Vamos conectar?</h1>
         <p style={styles.subtitle}>
           Estou sempre aberto a novos desafios técnicos e colaborações em projetos inovadores.
         </p>
